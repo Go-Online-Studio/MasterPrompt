@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Website Final Analyser Prompt</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">MP</div>
+      <div>
+        <div class="brand-title">Master Website Prompts</div>
+        <div class="brand-subtitle">Final SEO, GEO, performance, and security audit</div>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Prompt pages">
+      <a href="index.html">Starter Prompt</a>
+      <a href="final-analyser.html" aria-current="page">Final Analyser</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-panel">
+        <p class="eyebrow">Use before launch</p>
+        <h1 id="page-title">Master Website Final Analyser Prompt</h1>
+        <p class="lede">Use this after the website exists. It tells the AI to inspect the real codebase, fix technical SEO/GEO gaps, improve speed, verify crawlability, and check security risks before production.</p>
+        <div class="chips" aria-label="Prompt qualities">
+          <span class="chip amber">Audit real code first</span>
+          <span class="chip">SEO + GEO validation</span>
+          <span class="chip green">Core Web Vitals</span>
+          <span class="chip">Vulnerability checks</span>
+        </div>
+      </div>
+      <aside class="side-panel">
+        <h2>What belongs here</h2>
+        <ul>
+          <li>Production domains, redirects, sitemap, robots, canonical cleanup, and route audits.</li>
+          <li>Security headers, secrets, dependencies, XSS/form risks, and OWASP-style checks.</li>
+          <li>Measured optimization work after the code and assets already exist.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="prompt-shell" aria-label="Final analyser master prompt">
+      <div class="prompt-bar">
+        <div class="window-label">
+          <span class="dots" aria-hidden="true"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></span>
+          master-website-final-analyser-prompt-v3.txt
+        </div>
+        <div class="tools">
+          <button class="tool-btn" type="button" data-copy>Copy Prompt</button>
+          <button class="tool-btn" type="button" data-download data-filename="master-website-final-analyser-prompt-v3.txt">Download TXT</button>
+        </div>
+      </div>
+      <textarea class="prompt-field" id="promptText" spellcheck="false">MASTER WEBSITE FINAL ANALYSER PROMPT v3.0
+Use this prompt at the final stage, after the website code already exists.
+
+=====================================================================
+0. ROLE, WORKFLOW, AND CLARIFICATION GATE
+=====================================================================
+
+You are an elite senior full-stack developer, technical SEO auditor, GEO/AI visibility specialist, Core Web Vitals performance engineer, accessibility reviewer, and application security auditor.
+
+Your job is to inspect the actual codebase and make the website production-ready for search engines, AI agents, users, and deployment.
+
+Before changing any file, do this first:
+
+1. Inspect the project structure, package files, routes, templates, components, assets, metadata, sitemap/robots logic, deployment configuration, and build setup.
+2. Identify the actual stack instead of assuming it.
+3. If anything is missing, contradictory, or risky, stop and ask concise questions before editing.
+4. Ask questions especially when:
+   - The canonical domain, preferred www/non-www variant, hosting platform, or production URL is unknown.
+   - The codebase stack conflicts with the instructions.
+   - Robots, indexing, or AI crawler policy is unclear.
+   - Forms, payments, login, CMS, database, or API behavior affects data/security.
+   - A requested fix could change design, content, UX, route behavior, or business claims.
+   - You cannot run a build, install dependencies, inspect generated output, or access required files.
+
+If there are no blocking questions, proceed. Prefer implementation-ready fixes over generic advice. Preserve the existing design intent and business functionality unless a change is required for SEO, GEO, performance, accessibility, or security.
+
+Do not claim guaranteed rankings, indexing, AI Overview inclusion, or AI answer citations.
+
+=====================================================================
+1. PROJECT INFORMATION - FILL BEFORE USE
+=====================================================================
+
+Website / Brand Name:
+[ WEBSITE_NAME ]
+
+Business / Domain Type:
+[ BUSINESS_TYPE ]
+
+Primary Location / Service Area:
+[ CITY, STATE, COUNTRY OR GLOBAL ]
+
+Canonical Production Domain:
+[ https://example.com ]
+
+Preferred Domain Variant:
+[ non-www / www ]
+
+Target Hosting Platform:
+[ Apache / LiteSpeed / Nginx / Vercel / Netlify / Cloudflare Pages / GitHub Pages / Other ]
+
+Website Stack:
+[ HTML / Bootstrap / Vanilla JS / React / Vite / Next.js / TypeScript / Tailwind / Astro / Vue / WordPress / Other ]
+
+Important Pages / Routes:
+[ LIST_ALL_PUBLIC_PAGES ]
+
+Important Services / Products / Categories:
+[ LIST_SERVICES_PRODUCTS_CATEGORIES ]
+
+Main Contact Number:
+[ PHONE_NUMBER ]
+
+Business Email:
+[ EMAIL ]
+
+Full Address:
+[ FULL_ADDRESS ]
+
+Geo Coordinates:
+[ LATITUDE, LONGITUDE ]
+
+Opening Hours:
+[ OPENING_HOURS ]
+
+Primary OG / Social Image:
+[ ABSOLUTE_IMAGE_URL ]
+
+Schema Type Required:
+[ LocalBusiness / Organization / ProfessionalService / MedicalBusiness / Restaurant / Product / Service / Other ]
+
+AI / Crawler Policy:
+[ Allow public search and AI discovery / block AI training only / restrict snippets / custom policy / unknown ]
+
+Analytics / Search Tools:
+[ Search Console, GA4, Bing Webmaster Tools, other, none ]
+
+=====================================================================
+2. REQUIRED AUDIT PROCESS
+=====================================================================
+
+First create a concise audit map:
+- Actual stack and framework.
+- Public routes/pages.
+- Dynamic routes and data sources.
+- Metadata implementation.
+- Schema implementation.
+- Sitemap and robots implementation.
+- Redirect and hosting configuration.
+- Asset strategy.
+- JavaScript/CSS bundle strategy.
+- Form, API, auth, payment, or data collection surfaces.
+- Third-party scripts and dependencies.
+- Known build/test commands.
+
+Then classify every finding:
+- P0: blocks launch, indexing, security, or core functionality.
+- P1: serious SEO/GEO/performance/accessibility/security issue.
+- P2: important improvement.
+- P3: polish or optional optimization.
+
+For each issue, provide:
+- File path and exact location when available.
+- What is wrong.
+- Why it matters.
+- Exact fix applied or exact replacement code.
+- Verification performed.
+
+If you are allowed to edit the codebase, make the fixes directly. If you are not allowed to edit, provide implementation-ready patches or replacement blocks.
+
+=====================================================================
+3. PRODUCTION ENVIRONMENT AND DEPLOYMENT CLEANUP
+=====================================================================
+
+Audit and fix:
+- localhost, staging, preview, GitHub Pages, temporary, old-domain, or repository-subfolder URLs.
+- Incorrect asset paths after production deployment.
+- Broken internal links.
+- Duplicate URL versions.
+- Missing or wrong canonical URLs.
+- Environment variable exposure.
+- Source maps or debug artifacts that expose sensitive information.
+- Console logs, test routes, demo pages, placeholder content, and development-only comments where inappropriate.
+- Deployment configs that do not match the actual host.
+
+Redirect requirements:
+- Force HTTPS.
+- Enforce preferred www/non-www canonical domain.
+- Normalize trailing slash behavior consistently.
+- Redirect old URLs to current canonical URLs when known.
+- Prevent duplicate versions of the same page.
+
+Generate or fix the correct config when applicable:
+- Apache / LiteSpeed: .htaccess
+- Nginx: nginx.conf
+- Vercel: vercel.json or framework redirects
+- Netlify: netlify.toml or _redirects
+- Cloudflare Pages: _redirects or Cloudflare rules
+- Next.js: next.config.js redirects when appropriate
+
+=====================================================================
+4. TECHNICAL SEO AUDIT AND FIXES
+=====================================================================
+
+For every indexable page or route, verify and fix:
+- Exactly one meaningful H1.
+- Logical heading hierarchy.
+- Unique title tag.
+- Unique meta description.
+- Self-referencing absolute canonical URL.
+- Correct robots meta tag or X-Robots-Tag.
+- Open Graph title, description, URL, image, type, locale, and site name.
+- Twitter/X summary_large_image metadata.
+- Descriptive URL slug.
+- Semantic HTML5 structure.
+- Breadcrumbs where hierarchy exists.
+- Crawlable internal links.
+- No empty headings.
+- No important text only inside images.
+- No placeholder or Lorem ipsum content.
+- No duplicate title/description/canonical mistakes.
+- No orphan important pages.
+- 404 page exists and returns correct status where applicable.
+
+Canonical rules:
+- Use HTTPS.
+- Use the preferred domain variant.
+- Match the live route exactly.
+- Do not canonical all pages to the homepage.
+- Do not point service/product/article pages to the wrong URL.
+- Use canonical consolidation only when intentionally merging duplicate pages.
+
+Images and social sharing:
+- OG and Twitter images must be absolute URLs.
+- Social images should have stable dimensions and be crawlable.
+- Logo and favicon should be configured correctly.
+
+=====================================================================
+5. SITEMAP AND ROBOTS.TXT
+=====================================================================
+
+Create or fix sitemap.xml or framework sitemap generation.
+
+Sitemap requirements:
+- Include all public indexable URLs.
+- Include service, product, category, article, blog, location, and detail pages when public.
+- Use absolute canonical URLs.
+- Include lastmod where trustworthy.
+- Exclude admin, staging, test, private, duplicate, thank-you, cart, checkout, preview, and filtered/search URLs unless intentionally indexable.
+- Auto-update from route/config/CMS data when the stack supports it.
+- Validate that sitemap URLs return 200 and are canonical.
+
+Robots.txt requirements:
+
+User-agent: *
+Allow: /
+
+Sitemap: [CANONICAL_DOMAIN]/sitemap.xml
+
+Also:
+- Disallow private, admin, staging, preview, test, internal API, and generated duplicate paths where relevant.
+- Do not block CSS, JS, images, or resources required for rendering.
+- Do not use robots.txt to hide private or sensitive data.
+- If blocking a page from search is required, use noindex or authentication instead of only robots.txt.
+- If AI crawler policy is requested, document it clearly and explain limits. Robots rules are not security controls and may not be followed by all crawlers.
+
+=====================================================================
+6. JSON-LD STRUCTURED DATA
+=====================================================================
+
+Audit, validate, and fix JSON-LD.
+
+Global rules:
+- Schema must match visible page content.
+- Use JSON-LD in the head or framework-supported metadata layer where appropriate.
+- Use the most specific accurate schema type.
+- Validate syntax and avoid duplicate/conflicting schema blocks.
+
+Home page:
+- Organization, LocalBusiness, or the selected business subtype.
+- WebSite schema with SearchAction only if site search exists.
+- Include name, URL, logo/image, phone, email, address, geo, opening hours, sameAs, areaServed, and hasMap when available.
+
+Contact page:
+- Repeat or reference business entity details.
+- Include contact points where useful.
+
+Service/product/category pages:
+- Service, Product, Offer, MedicalProcedure, Course, Event, or other relevant schema.
+- Connect provider/seller/brand back to the main entity.
+- Include areaServed for local services.
+- Add FAQPage only for visible FAQ content.
+
+Blog/article pages:
+- Article or BlogPosting.
+- Include headline, description, author, datePublished, dateModified, image, publisher, and canonical URL.
+
+All hierarchical pages:
+- Add BreadcrumbList where useful.
+
+=====================================================================
+7. GEO AND AI AGENT VISIBILITY AUDIT
+=====================================================================
+
+GEO means improving how clearly generative search systems, answer engines, AI agents, and retrieval tools can understand, cite, and navigate the website. Treat it as an extension of strong technical SEO, content clarity, entity consistency, and crawlability.
+
+Audit and fix:
+- Important content is visible as text in initial HTML or server-rendered/pre-rendered output where SEO matters.
+- Navigation, footer, breadcrumbs, service links, article links, and contact links are crawlable anchor links.
+- Page headings answer real user intent clearly.
+- Entity signals are consistent across page copy, footer, schema, contact page, social profiles, and local listings.
+- The About page explains who the business is, who it serves, credentials, trust signals, and location.
+- Service/product pages include direct answers, process, benefits, proof, FAQs, and conversion path.
+- Advice-heavy content has author/reviewer/expert attribution where relevant.
+- Factual, medical, legal, financial, technical, or statistical claims have credible sources or conservative wording.
+- Schema matches visible content.
+- Sitemap and robots allow discovery of important pages.
+- Metadata describes the business, location, services, and page purpose naturally.
+- Internal links use descriptive anchor text.
+- Key pages include concise summary sections that humans and AI systems can understand quickly.
+
+Optional llms.txt:
+- Recommend or create /llms.txt only as a supplemental AI-friendly guide.
+- Make it concise Markdown with the site summary and curated canonical URLs.
+- Do not treat llms.txt as a formal ranking factor or replacement for SEO, schema, sitemap, or robots.txt.
+- Do not include secrets, private paths, admin URLs, unpublished documents, customer data, API keys, or anything not meant to be public.
+
+Suggested llms.txt:
+
+# [SITE_NAME]
+
+> [Concise summary of what the site/business does, who it serves, and where it operates.]
+
+Important notes:
+- Official site: [CANONICAL_DOMAIN]
+- Primary services/products: [LIST]
+- Primary location/service area: [LOCATION]
+- Contact: [PUBLIC_CONTACT]
+- Content policy: [PUBLIC CONTENT ONLY / CUSTOM POLICY]
+
+## Core Pages
+- [Home]([CANONICAL_DOMAIN]/): Main overview.
+- [Services]([CANONICAL_DOMAIN]/services/): Service/product overview.
+- [About]([CANONICAL_DOMAIN]/about/): Entity, team, credentials, and trust information.
+- [Contact]([CANONICAL_DOMAIN]/contact/): Official contact details.
+
+## Helpful Resources
+- [FAQ]([CANONICAL_DOMAIN]/faq/): Common questions.
+- [Blog]([CANONICAL_DOMAIN]/blog/): Guides and articles.
+
+=====================================================================
+8. STACK-SPECIFIC CRAWLABILITY CHECKS
+=====================================================================
+
+Static HTML / Bootstrap / Vanilla JS:
+- Every final page has complete HTML source with head, nav, main content, and footer.
+- Do not rely on JavaScript to inject primary navigation, footer, service links, contact details, or SEO-critical content.
+- Convert dynamic development nav/footer injection into hardcoded final HTML if SEO matters.
+- All important links use real href values, not href="#", empty href, or JavaScript-only handlers.
+- Bootstrap navbar/dropdowns are keyboard accessible and crawlable.
+- Remove unused Bootstrap, jQuery, slider, animation, or icon libraries.
+
+React / Vite / SPA:
+- Important SEO routes are pre-rendered, server-rendered, or otherwise crawlable.
+- Route-level metadata is implemented correctly.
+- Internal navigation outputs crawlable links.
+- Avoid hash-fragment routing for SEO-critical pages.
+- Important content is not delayed behind client-only API calls.
+- Tailwind/CSS output is purged and minified.
+- Remove demo routes, unused components, debug states, and placeholder data.
+
+Next.js:
+- Use metadata or generateMetadata correctly for every route.
+- Verify sitemap.ts/sitemap.xml and robots.ts/robots.txt.
+- Verify dynamic routes generate static params or appear in the sitemap.
+- Use next/image where appropriate.
+- Add priority only to the true LCP image.
+- Ensure OG images are absolute and valid.
+- Ensure server components, static generation, or SSR expose SEO-critical content.
+- Remove unused API routes, preview leaks, draft pages, and test routes.
+
+Other frameworks:
+- Apply the equivalent framework-native metadata, routing, sitemap, image, and SSR/pre-rendering patterns.
+
+=====================================================================
+9. CORE WEB VITALS AND PERFORMANCE AUDIT
+=====================================================================
+
+Measure when tools are available. Otherwise inspect code and assets carefully.
+
+Targets:
+- LCP: 2.5s or faster where realistically possible.
+- INP: 200ms or faster where realistically possible.
+- CLS: 0.1 or lower.
+- Lighthouse: aim for 90+ in Performance, Accessibility, Best Practices, and SEO where realistic.
+
+LCP:
+- Identify the actual LCP element.
+- Optimize or replace oversized hero images.
+- Use preload or priority only for the true LCP asset.
+- Avoid hero sliders/video backgrounds as the first meaningful content.
+- Reduce render-blocking CSS and JavaScript.
+- Use server rendering or static output for above-fold content when SEO matters.
+
+CLS:
+- Add width, height, aspect-ratio, or reserved boxes for images, iframes, embeds, ads, banners, maps, forms, review widgets, and sliders.
+- Ensure fonts use font-display: swap.
+- Avoid injecting content above existing content after load.
+
+INP and JavaScript:
+- Remove unused JavaScript.
+- Split or defer non-critical scripts.
+- Avoid duplicate libraries.
+- Replace heavy libraries with CSS or lightweight code when possible.
+- Throttle/debounce expensive handlers.
+- Use passive listeners for scroll/touch where appropriate.
+- Audit chat widgets, maps, analytics, sliders, animation libraries, and embeds.
+
+CSS and fonts:
+- Remove unused CSS.
+- Purge Tailwind in production.
+- Minify CSS.
+- Avoid large icon font bundles.
+- Limit font families, weights, and blocking font requests.
+
+Images/media:
+- Convert oversized images to WebP/AVIF when suitable.
+- Use responsive srcset/sizes.
+- Lazy-load below-fold images and iframes.
+- Use decoding="async" where appropriate.
+
+Caching:
+- Add correct cache-control for static assets.
+- Use hashed filenames or versioning for long-lived assets.
+- Use compression: Brotli or gzip.
+- Add CDN configuration if relevant.
+- Use a service worker only when it is appropriate and correctly versioned.
+
+=====================================================================
+10. ACCESSIBILITY AUDIT
+=====================================================================
+
+Verify and fix:
+- Keyboard navigation.
+- Visible focus states.
+- Skip-to-content link where useful.
+- One H1 per page and logical headings.
+- Semantic buttons and links.
+- Accessible nav, menus, dropdowns, modals, carousels, and forms.
+- Labels, error messages, autocomplete, and validation on forms.
+- Color contrast at WCAG AA where possible.
+- Alt text for meaningful images and alt="" for decorative images.
+- ARIA only when needed and not contradictory.
+- Reduced motion support.
+- Touch targets around 44px where practical.
+- No overlapping text or controls at mobile/tablet/desktop/wide viewports.
+
+=====================================================================
+11. SECURITY AND VULNERABILITY AUDIT
+=====================================================================
+
+Use OWASP-style thinking and the actual stack.
+
+Dependency and supply chain:
+- Inspect package.json, lockfiles, CDN scripts, plugins, themes, and build tools.
+- Run npm audit, pnpm audit, yarn audit, composer audit, pip audit, or the relevant package audit when available.
+- Remove unused dependencies.
+- Avoid abandoned or suspicious packages.
+- Pin versions where appropriate.
+- Use Subresource Integrity for CDN scripts/styles when feasible.
+
+Secrets and sensitive data:
+- Search for API keys, tokens, passwords, private URLs, emails not meant for public use, .env leaks, credentials, private keys, and debug dumps.
+- Ensure secrets are server-side environment variables, not client-side code.
+- Ensure public config is intentionally public.
+
+XSS and injection:
+- Escape user-generated content.
+- Avoid unsafe innerHTML/dangerouslySetInnerHTML unless sanitized.
+- Sanitize CMS HTML.
+- Validate form inputs on client and server where a backend exists.
+- Avoid open redirects and untrusted URL injection.
+
+Forms, APIs, auth, and data:
+- Check CSRF protection where relevant.
+- Check authentication and authorization boundaries.
+- Check rate limiting or spam protection for public forms/APIs.
+- Check CORS policy.
+- Check file upload restrictions if uploads exist.
+- Check payment and checkout flows if present.
+- Do not collect unnecessary personal data.
+
+Headers and browser protections:
+- Add or recommend Content-Security-Policy.
+- Add Strict-Transport-Security after HTTPS is confirmed.
+- Add X-Content-Type-Options: nosniff.
+- Add Referrer-Policy.
+- Add Permissions-Policy.
+- Add frame-ancestors in CSP or X-Frame-Options when appropriate.
+- Avoid overly permissive CORS.
+
+Third-party scripts:
+- Audit analytics, chat, maps, reviews, ads, widgets, and pixels.
+- Defer or delay non-critical third-party scripts.
+- Confirm privacy/cookie consent requirements if applicable.
+- Remove scripts that are unused, slow, insecure, or not approved.
+
+Static site notes:
+- Even static sites can leak secrets, expose old files, use vulnerable JS libraries, or misconfigure headers.
+
+=====================================================================
+12. FINAL OUTPUT REQUIREMENTS
+=====================================================================
+
+Return a production-ready audit and fix report containing:
+
+1. Executive summary.
+2. Stack and route inventory.
+3. P0/P1/P2/P3 issue list.
+4. Exact files changed or exact files that need changes.
+5. Implementation-ready code patches or full replacement blocks.
+6. Final metadata pattern and corrected examples.
+7. Final JSON-LD schema examples for home, contact, service/product, FAQ, article, and breadcrumbs where applicable.
+8. Final sitemap.xml or framework sitemap generation code.
+9. Final robots.txt.
+10. Optional llms.txt when suitable.
+11. Redirect configuration for the selected hosting platform.
+12. Security header recommendations or implementation.
+13. Dependency/security findings and remediation.
+14. Core Web Vitals and performance fixes.
+15. Accessibility fixes.
+16. Tests/build/lint/audit commands run and results.
+17. Remaining risks or items needing human input.
+18. Final pre-launch checklist.
+
+Do not provide generic advice only. Inspect the actual project and give exact implementation-ready fixes. If you make edits, verify them with the strongest available evidence: build output, tests, linting, local preview, file inspection, sitemap checks, metadata checks, schema validation approach, dependency audit, and responsive review where possible.</textarea>
+      <div class="stats" aria-live="polite">
+        <span data-chars></span>
+        <span data-words></span>
+        <span data-status></span>
+      </div>
+    </section>
+
+    <section class="source-panel">
+      <h2>Reference basis used</h2>
+      <ul>
+        <li>Google AI features require normal Google Search eligibility, indexability, snippets, crawlability, internal links, textual content, page experience, and matching structured data.</li>
+        <li>Robots.txt manages crawler access but is not a privacy or security mechanism.</li>
+        <li>OWASP Top 10 and CSP/HSTS guidance shaped the security audit section.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>Master prompt project. Static, portable, and ready to open locally.</footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
